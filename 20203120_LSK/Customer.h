@@ -10,9 +10,10 @@ private:
 	bool MyTube, ticket;
 public:
 	void Basic(int Height,int Weight);
-	void Ticket(bool tube,int money);
+	void Rent(bool tube);
 	//void BuyFood(Resturant &Food, int money);
 	void CustomerState();	
+	void Money(int money);
 };
 
 #endif

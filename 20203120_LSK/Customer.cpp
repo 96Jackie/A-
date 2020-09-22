@@ -15,9 +15,9 @@ void Customer::Ticket(bool tube, int money)
 	Mytube = tube;
 	pay +=money;
 }
-void Customer::Buyfood(int money)
+void Customer::Money(int money)
 {
-	
+	Pay +=money;
 }
 void Customer::CustomerState()
 {
