@@ -3,23 +3,22 @@
 
 using namespace std;
 
-void Customer::Basic(int Height,int weight)
+void Customer::Basic(int Height,int weight)//키, 몸무게 받아오기
 {
 	Myheight = height;
 	Myweight = weight;
-	ticket = false;
-	pay = 0;
+	Pay = 0;//내야할돈 초기화 
 }
-void Customer::Ticket(bool tube, int money)
-{
-	Mytube = tube;
-	pay +=money;
-}
-void Customer::Money(int money)
+void Customer::Money(int money)// 돈쓰면 private 변수에 저장하기위한 함수  
 {
 	Pay +=money;
 }
-void Customer::CustomerState()
+void Customer::Ticket(bool free,int num )//자유이용권이면 free 에 트루값, 아니면 놀이기구 사용횟수 num값에 받기  
+{
+	Free = free;
+	Num = num;
+}
+void Customer::CustomerState()//놀이기구 횟수, 내야할돈, 튜브 빌린거 확인 
 {
 	cout<<"내야할 돈 : "<<pay<<endl;
 	cout<<"튜브 여부 : "<<Mytube<<endl;
