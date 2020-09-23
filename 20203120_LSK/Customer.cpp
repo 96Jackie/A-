@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void Customer::Basic(int Height,int weight)//키, 몸무게 받아오기
+void Customer::Basic(int height,int weight)//키, 몸무게 받아오기
 {
 	Myheight = height;
 	Myweight = weight;
@@ -11,7 +11,7 @@ void Customer::Basic(int Height,int weight)//키, 몸무게 받아오기
 }
 void Customer::Money(int money)// 돈쓰면 private 변수에 저장하기위한 함수  
 {
-	Pay +=money;
+	Pay +=money;	
 }
 void Customer::Ticket(bool free,int num )//자유이용권이면 free 에 트루값, 아니면 놀이기구 사용횟수 num값에 받기  
 {

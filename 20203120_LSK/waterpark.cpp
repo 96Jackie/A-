@@ -14,7 +14,7 @@ int main(void)
     cout<<"몸무게 : ";
     cin >>weight;
     Customer Cus;
-    Cus.Basic(height,weight);
+    Cus.Basic(height, weight);
     
     while (1)
     {
@@ -25,7 +25,7 @@ int main(void)
         cout << "4.상태"<<endl;
         cin >> choice;
         switch (choice)
-            case TICKETOFFICE:
+          {  case TICKETOFFICE:
                 //상호작용출력하는함수(1.대여소,2.퇴장,3.매표소)
                 //1.매표소->티켓안내->선택->가격정산
                 //2.대여소->튜브,구명조끼안내->선택->가격정산
@@ -40,6 +40,8 @@ int main(void)
             case STATE:
             	Cus.CustomerState();
 				break;
+			}
                 return 0;
-    }
+ 			
+	}
 }
