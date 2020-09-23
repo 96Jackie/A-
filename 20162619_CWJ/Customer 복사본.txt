@@ -1,0 +1,30 @@
+//
+//  Customer.cpp
+//  Waterpark
+//
+//  Created by JooChanwoo on 2020/09/22.
+//
+#include <iostream>
+#include "Customer.hpp"
+
+using namespace std;
+
+void Customer::Basic(int height,int weight)
+{
+     MyHeight = height;
+     MyWeight = weight;
+    ticket = false;
+     Pay = 0;
+}
+void Customer::Ticket(bool tube, int money)
+{
+     MyTube = tube;
+     Pay +=money;
+}
+
+void Customer::CustomerState()
+{
+     cout<<"내야할 돈 : "<<Pay<<endl;
+     cout<<"튜브 여부 : "<<MyTube<<endl;
+     cout<<"놀이기구 이용 횟수"<<endl;
+}
