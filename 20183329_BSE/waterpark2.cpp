@@ -36,8 +36,11 @@ int main(void)
         switch (choice)
         {
         case TICKETOFFICE:
-            ticketoffice.list();//상호작용출력하는함수(1.대여소,2.퇴장,3.매표소)
-            //1.매표소->티켓안내->선택->가격정산
+            ticketoffice.list();
+                cin>>choice;//상호작용출력하는함수(1.대여소,2.퇴장,3.매표소)
+            if(choice==1)
+            {
+                ticketoffice.~~~()//1.매표소->티켓안내->선택->가격정산
             //2.대여소->튜브,구명조끼안내->선택->가격정산
             //3.퇴장->가격정산출력->종료
             //break;
