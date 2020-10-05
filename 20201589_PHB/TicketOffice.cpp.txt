@@ -4,7 +4,6 @@
 using namespace std;
 
 
-
 void TicketOffice::list(void)
 {
 	cout << "1. 매표소" << endl;
@@ -22,7 +21,7 @@ void TicketOffice::Ticketlist(void)
 	cout << "구매할 티켓의 번호를 입력하십시오." << endl << endl;
 }
 
-int TicketOffice::Ticketing(int num)
+int TicketOffice::TicketingPrice(int num)
 {
 
 	switch (ticketnum)
@@ -62,7 +61,79 @@ int TicketOffice::Ticketing(int num)
 	}
 	return price;
 }
+bool TicketOffice::TicketingCount_1(int num)
+{
+	switch (ticketnum)
+	{
+	case 1:
+	{
+		right = true;
+		break;
+	}
 
+	case 2:
+	{
+		right = false;
+		break;
+	}
+
+	case 3:
+	{
+		right = false;
+		break;
+	}
+
+	case 4:
+	{
+		right = false;
+		break;
+	}
+
+	case 5:
+	{
+		right = false;
+		break;
+	}
+
+	default: {}
+
+	}
+	return right;
+}
+
+int TicketOffice::TicketingCount_2(int num)
+{
+	switch (ticketnum)
+	{
+	case 2:
+	{
+		count = 3;
+		break;
+	}
+
+	case 3:
+	{
+		count = 2;
+		break;
+	}
+
+	case 4:
+	{
+		count = 1;
+		break;
+	}
+
+	case 5:
+	{
+		count = 0;
+		break;
+	}
+
+	default: {}
+
+	}
+	return count;
+}
 void TicketOffice::Rentlist(void)
 {
 	cout << "1. 구명조끼" << "[6,000원]" << endl;
@@ -118,4 +189,48 @@ int TicketOffice::Rent(int num)
 
 	}
 	return price;
+}
+
+bool TicketOffice::RentCheck(int num)
+{
+	switch (rent)
+	{
+	case 1:
+	{
+		tube = right;
+		break;
+	}
+
+	case 2:
+	{
+		tube = right;
+		break;
+	}
+
+	case 3:
+	{
+		tube = right;
+		break;
+	}
+
+	case 4:
+	{
+		tube = right;
+		break;
+	}
+
+	case 5:
+	{
+		tube = right;
+		break;
+	}
+
+	case 6:
+	{
+		tube = right;
+		break;
+	}
+
+	}
+	return tube;
 }
