@@ -4,11 +4,7 @@
 using namespace std;
 
 
-// 
-void TicketOffice::paycheck(Customer& Cus, int price)
-{
-	Cus.Money(price);
-}
+
 void TicketOffice::list(void)
 {
 	cout << "1. 매표소" << endl;
