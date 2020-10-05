@@ -197,37 +197,37 @@ bool TicketOffice::RentCheck(int num)
 	{
 	case 1:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
 	case 2:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
 	case 3:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
 	case 4:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
 	case 5:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
 	case 6:
 	{
-		tube = right;
+		tube = true;
 		break;
 	}
 
