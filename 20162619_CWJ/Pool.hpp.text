@@ -25,7 +25,7 @@ private:
 public:
     void PoolChoice();
     int MinusRiding(int num);
-    void LifeGuard(bool jacket);
+    void LifeGuard(bool tube);
     void ShowRidingResult();
     void HightWeight(int height,int weight);
     
@@ -34,3 +34,4 @@ public:
 
 
 #endif /* Pool_hpp */
+
