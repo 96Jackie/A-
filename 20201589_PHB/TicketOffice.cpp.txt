@@ -3,12 +3,6 @@
 #include "Customer.h"
 using namespace std;
 
-
-void TicketOffice::list(void)
-{
-	cout << "1. 매표소" << endl;
-}
-
 void TicketOffice::Ticketlist(void)
 {
 	cout << "1. 자유이용권" << "[35,000원]" << endl;
