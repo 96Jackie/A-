@@ -7,24 +7,22 @@
 
 #include "Pool.hpp"
 #include <iostream>
-
+#include "Customer.hpp"
 using namespace std;
 
 
 
+// outTube 랑 outNum 있을거야.
 
-class Pool
+void Pool::LifeGuard(bool tube)
 {
-private:
-    int choice;
-    int numRestRiding;
-    bool myTube;
-    int cusHeight;
-    int cusWeight;
-    
-/*
-public:
-    void PoolChoice()
+    if (tube==0) {
+        cout<<"튜브가 필요합니다. 튜브 없이는 이용이 불가합니다."<<endl;
+    }
+   
+}
+
+    void Pool::PoolChoice()
     {
         cout<<"희망하는 놀이기구를 선택해주세요."<<endl;
         cout<<"1.몬스터블라스터"<<endl;
@@ -46,7 +44,7 @@ public:
                 {
                     numRestRiding--
                     
-                    for (i=0; i<4; i++) {
+                    for (int i=0; i<4; i++) {
                         cout<<"몬스터블라스터를 타는중입니다."<<endl;
                     };
                     cout<<"몬스터블라스터를 즐겁게 탔습니다."<<endl;
@@ -66,7 +64,7 @@ public:
                 {
                     numRestRiding--
                     
-                    for (i=0; i<4; i++) {
+                    for (int i=0; i<4; i++) {
                         cout<<"부메랑고를 타는중입니다."<<endl;
                     };
                     cout<<"부메랑고를 즐겁게 탔습니다."<<endl;
@@ -86,7 +84,7 @@ public:
                 {
                     numRestRiding--
                     
-                    for (i=0; i<4; i++) {
+                    for (int i=0; i<4; i++) {
                         cout<<"더블 토네이도를 타는중입니다."<<endl;
                     };
                     cout<<"더블 토네이도를 즐겁게 탔습니다."<<endl;
@@ -97,61 +95,10 @@ public:
     
         
         
-    void LifeGuard(bool jacket);
-    void ShowRidingResult();
-    void HightWeight(int height,int weight);
+    void Pool::LifeGuard(bool jacket);
+    void Pool::ShowRidingResult();
+    void Pool::HightWeight(int height,int weight);
     
     
     };
 
-*/
- 
-
-/*
-void Pool::PoolChoice()
-{
-        cout<<"희망하는 놀이기구를 선택해주세요."<<endl;
-        cout<<"1.몬스터블라스터"<<endl;
-        cout<<"2.부메랑고"<<endl;
-        cout<<"3.더블토네이도"<<endl;
-        cin>>choice;
-    switch (choice) {
-        case 1:
-            cout<<"몬스터블라스터를 선택하셨습니다."<<endl;
-            if (cusHeight<130||cusWeight>100) {
-                cout<<"키가 130미만이시기나 몸무게가 100kg 이상이신 분은 탑승이 불가합니다. "<<endl;
-            }
-            else
-                int MinusRiding(int num);
-            
-            if(num=-1)
-                cout<<"이용권이 소진되었습니다. 재구매 바랍니다."<<endl;
-            
-            
-             
-            break;
-            
-        default:
-            break;
-    }
-        }
-
-void Pool::LifeGuard(bool jacket)
-{
-    if(jacket=1){
-     
-        cout>>>>endl;
-    }
-}
-
-int Pool::MinusRiding(int num)
-{
-    
-    numRestRiding--;
-    
-    num=numRestRiding;
-    
-    return num;
-}
-
-*/
