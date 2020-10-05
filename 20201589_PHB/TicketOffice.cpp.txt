@@ -3,6 +3,7 @@
 #include "Customer.h"
 using namespace std;
 
+
 // 
 void TicketOffice::paycheck(Customer& Cus, int price)
 {
@@ -25,49 +26,45 @@ void TicketOffice::Ticketlist(void)
 	cout << "구매할 티켓의 번호를 입력하십시오." << endl << endl;
 }
 
-void TicketOffice::Ticketing(int num)
+int TicketOffice::Ticketing(int num)
 {
-	
-	cin >> ticketnum;
-	cout << "구매한 티켓의 번호 : " << ticketnum << endl;
+
 	switch (ticketnum)
 	{
 	case 1:
 	{
 		price = 35000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 2:
 	{
 		price = 30000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 3:
 	{
 		price = 27500;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 4:
 	{
 		price = 25000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 5:
 	{
 		price = 20000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
+	default: {}
+
 	}
+	return price;
 }
 
 void TicketOffice::Rentlist(void)
@@ -81,7 +78,7 @@ void TicketOffice::Rentlist(void)
 	cout << "대여할 물품의 번호를 입력하십시오." << endl << endl;
 }
 
-void TicketOffice::Rent(int num)
+int TicketOffice::Rent(int num)
 {
 	cin >> rent;
 	cout << "대여한 물품의 번호 : " << rent << endl;
@@ -90,44 +87,39 @@ void TicketOffice::Rent(int num)
 	case 1:
 	{
 		price = 6000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 2:
 	{
 		price = 4000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 3:
 	{
 		price = 16000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 4:
 	{
 		price = 12000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 5:
 	{
 		price = 10000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	case 6:
 	{
 		price = 6000;
-		TicketOffice::paycheck(Customer & Cus, int price);
 		break;
 	}
 
 	}
+	return price;
 }
