@@ -1,59 +1,100 @@
-#include <iostream>
+#include <string.h>
 #include "restaurant.h"
-#include "Customer.h"
+
 
 using namespace std;
 
-void Food::FoodChoice()//ÏÉÅÌò∏ÏûëÏö©ÏùÑ Ï∂úÎ†•Ìï† Ìï®Ïàò
+
+void Food::FoodChoice()//ªÛ»£¿€øÎ¿ª √‚∑¬«“ «‘ºˆ
 {
-	int num;
-    cout << "ÏõêÌïòÎäî Ïû•ÏÜåÎ•º Í≥†Î•¥ÏÑ∏Ïöî" << endl;
-    cout << "1.ÏãùÎãπ" << endl;
-    cout << "2.Îß§Ï†ê" << endl;
-    cout << "3.Ïπ¥Ìéò" << endl;
+    cout << "ø¯«œ¥¬ ¿Âº“∏¶ ∞Ì∏£ººø‰" << endl;
+    cout << "1.Ωƒ¥Á" << endl;
+    cout << "2.∏≈¡°" << endl;
+    cout << "3.ƒ´∆‰" << endl;
     cin >> choice;
     switch (choice)
             case 1:
     {
-        cout << "ÏõêÌïòÎäî ÏÉÅÌíàÏùò Î≤àÌò∏ ÏûÖÎ†•ÌïòÏÑ∏Ïöî" << endl;
-        cout << "1.Í≥§ÎìúÎ†àÎèåÏÜ•ÎπÑÎπîÎ∞•(15,000Ïõê)" << endl;
-        cout << "2.ÎèàÍπåÏä§(13500Ïõê)" << endl;
-        cout << "3.ÌÅ¨Î¶¨Ïä§ÌîºÏπòÌÇ®(22000Ïõê)" << endl;
-        cin >> num;
-        switch (num);{
-			case 1: 
-				void Paycheck(15000);
-				break;
-			case 2:
-				void Paycheck(13500);
-				break;
-			case 3:
-				void Paycheck(22000);
-				break;
-		}
-     
+        cout << "ø¯«œ¥¬ ªÛ«∞¿« π¯»£ ¿‘∑¬«œººø‰" << endl;
+        cout << "1.∞ÔµÂ∑πµπº‹∫Ò∫ˆπ‰(15,000ø¯)" << endl;
+        cout << "2.µ∑±ÓΩ∫(13500ø¯)" << endl;
+        cout << "3.≈©∏ÆΩ∫««ƒ°≈≤(22000ø¯)" << endl;
+        cin >> choice;
+        if (choice == 1)
+        {
+            price = 15000;
+            Food::Paycheck(Cus,price);
+        }
+        else if (choice == 2)
+        {
+            price = 13500;
+            Food::Paycheck(Cus, price);
+        }
+        else if (choice == 3)
+        {
+            price = 22000;
+            Food::Paycheck(Cus, price);
+        }
         break;
 
             case 2:
-                cout << "ÏõêÌïòÎäî ÏÉÅÌíàÏùò Î≤àÌò∏ ÏûÖÎ†•ÌïòÏÑ∏Ïöî" << endl;
-                cout << "1.ÎùºÎ©¥ÏÑ∏Ìä∏(10000Ïõê)" << endl;
-                cout << "2.Íµ¨Ïö¥Í≥ÑÎûÄ(3000Ïõê)" << endl;
-                cout << "3.Îñ°Í∞àÎπÑ ÏÜåÏÑ∏ÏßÄ(4000Ïõê)" << endl;
-                cout << "4.ÌÉÑÏÇ∞ÏùåÎ£å(2500Ïõê)" << endl;
-                cin >> price;
-                int Paycheck(Customer & Cus);
+            {
+                cout << "ø¯«œ¥¬ ªÛ«∞¿« π¯»£ ¿‘∑¬«œººø‰" << endl;
+                cout << "1.∂Û∏Èºº∆Æ(10000ø¯)" << endl;
+                cout << "2.±∏øÓ∞Ë∂ı(3000ø¯)" << endl;
+                cout << "3.∂±∞•∫Ò º“ºº¡ˆ(4000ø¯)" << endl;
+                cout << "4.≈∫ªÍ¿Ω∑·(2500ø¯)" << endl;
+                cin >> choice;
+                if (choice == 1)
+                {
+                    price = 10000;
+                    Food::Paycheck(Cus, price);
+                }
+                else if (choice == 2)
+                {
+                    price = 3000;
+                    Food::Paycheck(Cus, price);
+                }
+                else if (choice == 3)
+                {
+                    price = 4000;
+                    Food::Paycheck(Cus, price);
+                }
+                else if (choice == 4)
+                {
+                    price = 2500;
+                    Food::Paycheck(Cus, price);
+                }
                 break;
+            }
 
             case 3:
-                cout << "ÏõêÌïòÎäî ÏÉÅÌíàÏùò Î≤àÌò∏ÏùÑ ÏûÖÎ†•ÌïòÏÑ∏Ïöî" << endl;
-                cout << "1.Ïª§Ìîº(4000Ïõê)" << endl;
-                cout << "2.ÏãùÌòú(2500Ïõê)" << endl;
-                cout << "3.ÏïÑÏù¥Ïä§Ìã∞(3000Ïõê)" << endl;
-                cin >> price;
-                int Paycheck(Customer & Cus);
+            {
+                cout << "ø¯«œ¥¬ ªÛ«∞¿« π¯»£¿ª ¿‘∑¬«œººø‰" << endl;
+                cout << "1.ƒø««(4000ø¯)" << endl;
+                cout << "2.Ωƒ«˝(2500ø¯)" << endl;
+                cout << "3.æ∆¿ÃΩ∫∆º(3000ø¯)" << endl;
+                cin >> choice;
+                if (choice == 1)
+                {
+                    price = 4000;
+                    Food::Paycheck(Cus, price);
+                }
+                else if (choice == 2)
+                {
+                    price = 2500;
+                    Food::Paycheck(Cus, price);
+                }
+                else if (choice == 3)
+                {
+                    price = 3000;
+                    Food::Paycheck(Cus, price);
+                }
+                break;
+            }
     }
 }
-void Food::Paycheck(Customer &Cus)
+void Food::Paycheck(Customer & Cus,int price)
 {
-    Cus.Money(Custiner &Cus);  
+    Cus.Money(price);  
 }

@@ -24,4 +24,17 @@ void Customer::CustomerState()//놀이기구 횟수, 내야할돈, 튜브 빌린거 확인
 	cout<<"튜브 여부 : "<<Mytube<<endl;
 	cout<<"놀이기구 이용 횟수"<<endl;
 }
-
+void Customer::Exit()
+{
+		cout<<"결제 금액 : "<<pay<<endl;
+		cout<<"퇴장 하셨습니다."<<endl;
+ 
+}
+bool Customer::OutTube()
+{
+	return Mytube;
+}
+int Customer::Outnum()
+{
+	return Num;
+}
