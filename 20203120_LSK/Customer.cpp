@@ -31,10 +31,12 @@ void Customer::Exit()
  
 }
 bool Customer::OutTube()
-{
-	return Mytube;
+{	bool OutTube;
+	OutTube = MyTube;
+	return OutTube;
 }
 int Customer::OutNum()
-{
-	return Num;
+{	int i;
+	i = Num;
+	return i;
 }
