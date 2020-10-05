@@ -13,9 +13,8 @@ void Customer::Money(int money)// 돈쓰면 private 변수에 저장하기위한 함수
 {
 	Pay +=money;	
 }
-void Customer::Ticket(bool free,int num )//자유이용권이면 free 에 트루값, 아니면 놀이기구 사용횟수 num값에 받기  
+void Customer::Ticket(int num )//자유이용권이면 free 에 트루값, 아니면 놀이기구 사용횟수 num값에 받기  
 {
-	Free = free;
 	Num = num;
 }
 void Customer::CustomerState()//놀이기구 횟수, 내야할돈, 튜브 빌린거 확인 
@@ -35,7 +34,7 @@ bool Customer::OutTube()
 	OutTube = MyTube;
 	return OutTube;
 }
-int Customer::OutNum()
+int Customer::Num()
 {	int i;
 	i = Num;
 	return i;

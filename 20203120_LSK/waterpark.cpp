@@ -9,11 +9,11 @@ using namespace std;
 
 int main(void)
 {
-    int choice, height, weight;
-    bool tube;
+    int price,num,choice, height, weight;
+    bool tube,free;
     enum
     {
-        TICKETOFFICE = 1, POOL, RESTAURANT, STATE
+        POOL=1, RESTAURANT, STATE,EXIT
     };
     cout << "키 : ";
     cin >> height;
@@ -24,28 +24,25 @@ int main(void)
     Food food;
     TicketOffice ticketoffice;
     Pool pool;
-
+    ticketoffice.Ticketlist();
+    cin<<choice;
+    price = ticketoffice.Ticketing(choice);
+	Cus.Money(price)
+	num=ticketoffce.TicketingCount_2(choice);
+	Cus.Ticket(num) 
     while (1)
     {
         cout << "다음 장소를 고르세요.(단,퇴장하시려면 매표소로 가십시오)" << endl;
-        cout << "1.매표소" << endl;
-        cout << "2.수영장" << endl;
-        cout << "3.식당" << endl;
-        cout << "4.상태" << endl;
+        
+        cout << "1.수영장" << endl;
+        cout << "2.식당" << endl;
+        cout << "3.상태" << endl;
+        cout << "4.퇴장"<<endl;
         cin >> choice;
         switch (choice)
         {
-        case TICKETOFFICE:
-            ticketoffice.list();
-                cin>>choice;//상호작용출력하는함수(1.대여소,2.퇴장,3.매표소)
-            if(choice==1)
-            {
-                ticketoffice.~~~()//1.매표소->티켓안내->선택->가격정산
-            //2.대여소->튜브,구명조끼안내->선택->가격정산
-            //3.퇴장->가격정산출력->종료
-            //break;
-        case POOL:
-            cout << "구명조끼소지여부를 0(없다),1(있다)로 입력해주세요" << endl;
+		case POOL:
+            pool.PoolChoice(num);
             cin >> choice;
             pool.LifeGuard(choice);
             pool.HightWeight(height, weight);
@@ -53,12 +50,17 @@ int main(void)
             //ShowRidingResult();
             break;
         case RESTAURANT:
-            food.FoodChoice();
+            price = food.FoodChoice();
+            Cus.Money(price);
             break;
         case STATE:
             Cus.CustomerState();
             break;
-        }
+        
+        case EXIT:
+    		Cus.Exit();
+    		break
+    	}
         return 0;
 
     }

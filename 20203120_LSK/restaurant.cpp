@@ -37,7 +37,7 @@ void Food::FoodChoice()//상호작용을 출력할 함수
         }
         break;
 
-            case 2:
+        	case 2:
             {
                 cout << "원하는 상품의 번호 입력하세요" << endl;
                 cout << "1.라면세트(10000원)" << endl;
