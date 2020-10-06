@@ -126,4 +126,3 @@ int TicketOffice::TicketingCount_2(int num)
 	}
 	return count;
 }
-
