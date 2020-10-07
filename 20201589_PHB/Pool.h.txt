@@ -15,9 +15,9 @@ private:
 
 
 public:
-    void PoolChoice(int num);
+    int PoolChoice(int num);
     int NumChange(int num);
-
+    void Basic(int a, int b);
 
 
 };

@@ -34,7 +34,7 @@ int main(void)
     Cus.Ticket(num);
         while (1)
         {
-            cout << "다음 장소를 고르세요.(단,퇴장하시려면 매표소로 가십시오)" << endl;
+            cout << "다음 장소를 고르세요." << endl;
             cout << "1.수영장" << endl;
             cout << "2.식당" << endl;
             cout << "3.상태" << endl;
@@ -45,6 +45,7 @@ int main(void)
             case POOL:
             {
                 num = pool.PoolChoice(num);
+                Cus.Ticket(num);
                 break;
             }
             case RESTAURANT:
@@ -63,7 +64,9 @@ int main(void)
             case EXIT:
             {
                 Cus.Exit();
+                return 0;
                 break;
+            
             }
 
             default: {}

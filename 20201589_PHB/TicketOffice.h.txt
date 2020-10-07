@@ -10,10 +10,7 @@ class TicketOffice
 private:
 	int price;
 	int ticketnum;
-	int rent;
-	bool right;
 	int count;
-	bool tube;
 
 public:
 	void Ticketlist(void);

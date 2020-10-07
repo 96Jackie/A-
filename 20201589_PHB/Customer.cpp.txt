@@ -3,21 +3,21 @@
 
 using namespace std;
 
-void Customer::Basic(int height, int weight)//키, 몸무게 받아오기
+void Customer::Basic(int height, int weight)
 {
 	MyHeight = height;
 	MyWeight = weight;
-	Pay = 0;//내야할돈 초기화 
+	Pay = 0;
 }
-void Customer::Money(int money)// 돈쓰면 private 변수에 저장하기위한 함수  
+void Customer::Money(int money)
 {
 	Pay += money;
 }
-void Customer::Ticket(int num)//자유이용권이면 free 에 트루값, 아니면 놀이기구 사용횟수 num값에 받기  
+void Customer::Ticket(int num)
 {
 	Num = num;
 }
-void Customer::CustomerState()//놀이기구 횟수, 내야할돈, 튜브 빌린거 확인 
+void Customer::CustomerState()
 {
 	cout << "내야할 돈 : " << Pay << endl;
 	cout << "놀이기구 이용 횟수" << Num << endl << endl;
