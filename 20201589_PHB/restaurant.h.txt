@@ -12,6 +12,8 @@ private:
 
 public:
     int FoodChoice(int num);//상호작용출력+메뉴선택+결제시스템함수를포함한 함수
+    void Foodplacelist(void);
+
 };
 
 #endif

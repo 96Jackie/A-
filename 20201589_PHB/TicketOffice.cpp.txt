@@ -15,88 +15,60 @@ void TicketOffice::Ticketlist(void)
 
 int TicketOffice::TicketingPrice(int num)
 {
-
+	int ticketnum = num;
 	switch (ticketnum)
 	{
 	case 1:
 	{
 		price = 35000;
+		return price;
 		break;
 	}
 
 	case 2:
 	{
 		price = 30000;
+		return price;
 		break;
 	}
 
 	case 3:
 	{
 		price = 27500;
+		return price;
 		break;
 	}
 
 	case 4:
 	{
 		price = 25000;
+		return price;
 		break;
 	}
 
 	case 5:
 	{
 		price = 20000;
+		return price;
 		break;
 	}
 
 	default: {}
 
 	}
-	return price;
+	
 }
-bool TicketOffice::TicketingCount_1(int num)
+
+int TicketOffice::TicketingCount(int num)
 {
+	int ticketnum = num;
 	switch (ticketnum)
 	{
 	case 1:
 	{
-		right = true;
+		count = 9999999;
 		break;
 	}
-
-	case 2:
-	{
-		right = false;
-		break;
-	}
-
-	case 3:
-	{
-		right = false;
-		break;
-	}
-
-	case 4:
-	{
-		right = false;
-		break;
-	}
-
-	case 5:
-	{
-		right = false;
-		break;
-	}
-
-	default: {}
-
-	}
-	return right;
-}
-
-int TicketOffice::TicketingCount_2(int num)
-{
-	switch (ticketnum)
-	{
 	case 2:
 	{
 		count = 3;
