@@ -1,10 +1,3 @@
-//
-//  Pool.hpp
-//  Waterpark
-//
-//  Created by JooChanwoo on 2020/09/21.
-//
-
 #ifndef Pool_hpp
 #define Pool_hpp
 #include <iostream>
@@ -17,21 +10,17 @@ class Pool
 private:
     int choice;
     int numRestRiding;
-    bool MyTube;
     int cusHeight;
     int cusWeight;
-    
-    
+
+
 public:
-    void PoolChoice();
-    int MinusRiding(int num);
-    void LifeGuard(bool tube);
-    void ShowRidingResult();
-    void HightWeight(int height,int weight);
-    
-    
+    int PoolChoice(int num);
+    int NumChange(int num);
+    void Basic(int a,int b);
+
+
 };
 
 
-#endif /* Pool_hpp */
-
+#endif 
