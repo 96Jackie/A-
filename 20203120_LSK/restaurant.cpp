@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void Food::FoodChoice()//상호작용을 출력할 함수
+int Food::FoodChoice(int num)//상호작용을 출력할 함수
 {
     cout << "원하는 장소를 고르세요" << endl;
     cout << "1.식당" << endl;
@@ -23,21 +23,18 @@ void Food::FoodChoice()//상호작용을 출력할 함수
         if (choice == 1)
         {
             price = 15000;
-            Food::Paycheck(Cus,price);
         }
         else if (choice == 2)
         {
             price = 13500;
-            Food::Paycheck(Cus, price);
         }
         else if (choice == 3)
         {
             price = 22000;
-            Food::Paycheck(Cus, price);
         }
         break;
 
-        	case 2:
+            case 2:
             {
                 cout << "원하는 상품의 번호 입력하세요" << endl;
                 cout << "1.라면세트(10000원)" << endl;
@@ -48,22 +45,18 @@ void Food::FoodChoice()//상호작용을 출력할 함수
                 if (choice == 1)
                 {
                     price = 10000;
-                    Food::Paycheck(Cus, price);
                 }
                 else if (choice == 2)
                 {
                     price = 3000;
-                    Food::Paycheck(Cus, price);
                 }
                 else if (choice == 3)
                 {
                     price = 4000;
-                    Food::Paycheck(Cus, price);
                 }
                 else if (choice == 4)
                 {
                     price = 2500;
-                    Food::Paycheck(Cus, price);
                 }
                 break;
             }
@@ -78,23 +71,18 @@ void Food::FoodChoice()//상호작용을 출력할 함수
                 if (choice == 1)
                 {
                     price = 4000;
-                    Food::Paycheck(Cus, price);
+
                 }
                 else if (choice == 2)
                 {
                     price = 2500;
-                    Food::Paycheck(Cus, price);
                 }
                 else if (choice == 3)
                 {
                     price = 3000;
-                    Food::Paycheck(Cus, price);
                 }
                 break;
             }
     }
-}
-void Food::Paycheck(Customer & Cus,int price)
-{
-    Cus.Money(price);  
+    return price;
 }

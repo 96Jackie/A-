@@ -3,15 +3,6 @@
 #include "Customer.h"
 using namespace std;
 
-
-
-void TicketOffice::list(void)
-{
-	cout << "1. 매표소" << endl;
-	cout << "2. 대여소" << endl;
-	cout << "3. 퇴  장" << endl << endl;
-}
-
 void TicketOffice::Ticketlist(void)
 {
 	cout << "1. 자유이용권" << "[35,000원]" << endl;
@@ -22,7 +13,7 @@ void TicketOffice::Ticketlist(void)
 	cout << "구매할 티켓의 번호를 입력하십시오." << endl << endl;
 }
 
-int TicketOffice::Ticketing(int num)
+int TicketOffice::TicketingPrice(int num)
 {
 
 	switch (ticketnum)
@@ -62,60 +53,77 @@ int TicketOffice::Ticketing(int num)
 	}
 	return price;
 }
-
-void TicketOffice::Rentlist(void)
+bool TicketOffice::TicketingCount_1(int num)
 {
-	cout << "1. 구명조끼" << "[6,000원]" << endl;
-	cout << "2. 구명조끼 아동용" << "[4,000원]" << endl;
-	cout << "3. 4인 튜브" << "[16,000원]" << endl;
-	cout << "4. 3인 튜브" << "[12,000원]" << endl;
-	cout << "5. 2인 튜브" << "[10,000원]" << endl;
-	cout << "6. 1인 튜브" << "[6,000원]" << endl;
-	cout << "대여할 물품의 번호를 입력하십시오." << endl << endl;
-}
-
-int TicketOffice::Rent(int num)
-{
-	cin >> rent;
-	cout << "대여한 물품의 번호 : " << rent << endl;
-	switch (rent)
+	switch (ticketnum)
 	{
 	case 1:
 	{
-		price = 6000;
+		right = true;
 		break;
 	}
 
 	case 2:
 	{
-		price = 4000;
+		right = false;
 		break;
 	}
 
 	case 3:
 	{
-		price = 16000;
+		right = false;
 		break;
 	}
 
 	case 4:
 	{
-		price = 12000;
+		right = false;
 		break;
 	}
 
 	case 5:
 	{
-		price = 10000;
+		right = false;
 		break;
 	}
 
-	case 6:
-	{
-		price = 6000;
-		break;
-	}
+	default: {}
 
 	}
-	return price;
+	return right;
 }
+
+int TicketOffice::TicketingCount_2(int num)
+{
+	switch (ticketnum)
+	{
+	case 2:
+	{
+		count = 3;
+		break;
+	}
+
+	case 3:
+	{
+		count = 2;
+		break;
+	}
+
+	case 4:
+	{
+		count = 1;
+		break;
+	}
+
+	case 5:
+	{
+		count = 0;
+		break;
+	}
+
+	default: {}
+
+	}
+	return count;
+}
+
