@@ -15,7 +15,7 @@ public:
 	Monster(double def,int rewards, int GiveEXP) : def (def),rewards(rewards) ,GiveEXP(GiveEXP){
 		cout << "몬스터가 나타났습니다." << endl;
 	}
-	int underattack(character& character) {                           //공격반복+돈받기
+	character underattack(character& character) {                           //공격반복+돈받기
 		cout << "공격을 시작합니다." << endl;
 		for (; Monster::HP > 0;) {
 			damage = (character.att) * def;
@@ -40,7 +40,7 @@ public:
 	Boss(double def,int rewards,int GiveEXP) : Monster(def, rewards,GiveEXP) {
 		cout << "보스 몬스터가 나타났습니다." << endl;
 	}
-	int underattack(character& character) {      
+	character underattack(character& character) {      
 		cout << "보스 몬스터 공격을 시작합니다." << endl;                    //공격반복+돈받기
 		for (count=0; Boss::HP > 0;count++) {
 			if (count % 10 == 0) { damage = 0; }
