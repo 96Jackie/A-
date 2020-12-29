@@ -10,8 +10,9 @@ public:
 	double def;  //방어력
     double damage;
 	int rewards;
+	int GiveEXP;
 public:
-	Monster(double def,int rewards) : def (def),rewards(rewards) {
+	Monster(double def,int rewards, int GiveEXP) : def (def),rewards(rewards) ,GiveEXP(GiveEXP){
 		cout << "몬스터가 나타났습니다." << endl;
 	}
 	int underattack(character& character) {                           //공격반복+돈받기
@@ -33,9 +34,10 @@ public:
 
 class Boss : public Monster {
 private:
-	int count;                                                            //보스 특징:10회에 한번 damage=0
+	int count;  
+	int GiveEXP:                                         //보스 특징:10회에 한번 damage=0
 public:
-	Boss(double def,int rewards) : Monster(def, rewards) {
+	Boss(double def,int rewards,int GiveEXP) : Monster(def, rewards,GiveEXP) {
 		cout << "보스 몬스터가 나타났습니다." << endl;
 	}
 	int underattack(character& character) {      
