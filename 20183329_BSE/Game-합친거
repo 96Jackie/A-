@@ -1,4 +1,4 @@
-// code by BAESEOEUN
+
 
 #include <iostream>
 #include <cstring>
@@ -76,7 +76,7 @@ private:
 
 
 
-
+//code by SeoeunBae
 
 class Monster : public Game {
 public:
